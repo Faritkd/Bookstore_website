@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <section class="featured-books bg-light">
+        <div class="container">
+            <h2>Featured Books</h2>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/static/images/django.jpg" class="card-img-top" alt="Book 1">
+                        <div class="card-body">
+                            <h3 class="card-title">Book Title 1</h3>
+                            <p class="card-text">Author: Author Name</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="/static/images/django.jpg" class="card-img-top" alt="Book 2">
+                        <div class="card-body">
+                            <h3 class="card-title">Book Title 2</h3>
+                            <p class="card-text">Author: Author Name</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more featured books here -->
+            </div>
+        </div>
+    </section>
+    <section class="about bg-dark text-light">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to the Bookstore, where you can find a wide selection of books for all ages and interests. Our mission is to promote a love for reading and provide an enjoyable shopping experience for book enthusiasts.</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+    </section>
+{% endblock %}
