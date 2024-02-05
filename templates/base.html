@@ -14,14 +14,15 @@
     <header class="bg-dark text-light">
         <div class="container">
             <h1>Welcome to the Bookstore</h1>
+
             <nav>
                 <ul class="nav">
                     {% if user.is_authenticated %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                        <li><div><a href="{% url 'home' %}"><img class="logo" src="/static/images/logo4.png" alt="Logo"></a></div></li>
                         <li class="nav-items"><a class="nav-link" href="{% url 'about' %}">About</a></li>
                         <li class="nav-items"><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
                     {% else %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                        <li class="nav-item"><div><a href="{% url 'home' %}"><img class="logo" src="/static/images/logo4.png" alt="Logo"></a></div></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Log In</a></li>
                         <li class="nav-items"><a class="nav-link" href="{% url 'about' %}">About</a></li>
