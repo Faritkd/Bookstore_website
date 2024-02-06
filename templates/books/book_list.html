@@ -6,7 +6,7 @@
 
 {% block content %}
     {% for book in book_list %}
-        <div><h3><a href="{% url 'book_detail' pk=book.pk %}">{{ book }}</a></h3></div>
+        <div><h3><a href="{% url 'book_detail' slug=book.slug %}">{{ book }}</a></h3></div>
     {% endfor %}
 
 {% endblock %}
