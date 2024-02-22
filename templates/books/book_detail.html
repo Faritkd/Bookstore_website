@@ -7,10 +7,17 @@
 {% block content %}
     <div>
         <h2>
-            {{ book.title }}
+            Title: {{ book.title }}
         </h2>
         <p>
-            {{ book.author }}|{{ book.price }}
+            Author: {{ book.author }}<br>
+            Price: {{ book.price }}
         </p>
+        <h3>Reviews</h3>
+        <ul>
+            {% for review in book.reviews.all %}
+                <li>{{ review }}  ({{ review.author }}) | "{{ review.date }}"</li>
+            {% endfor %}
+        </ul>
     </div>
 {% endblock %}
