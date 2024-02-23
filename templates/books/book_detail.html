@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 	Book Detail
@@ -6,9 +7,8 @@
 
 {% block content %}
     <div>
-        <h2>
-            Title: {{ book.title }}
-        </h2>
+        <img class=book_cover src="{{ book.cover.url }}" alt="{{ book.title }}">
+        <h2>Title: {{ book.title }}</h2>
         <p>
             Author: {{ book.author }}<br>
             Price: {{ book.price }}
